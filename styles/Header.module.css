@@ -1,0 +1,27 @@
+/* Heading CSS Module */
+.headingWrapper {
+  margin: 1rem 0;
+}
+.headingWrapper > h3 {
+  text-align: center;
+  color: #240d57;
+}
+
+.headingWrapper :nth-child(2) {
+  background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerText {
+  font-family: 'Helvetica', 'sans-serif';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 18px;
+  text-align: center;
+
+  color: #4f4f4f;
+}

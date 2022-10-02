@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dddddd;
+}
+/* Font Optimization
+  - imported via Next.js and made globally reusable through TailwindCSS vars (primary...ect)
+*/
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../public/fonts/Helvetica.ttf');
+  src: url('../public/fonts/Helvetica-Bold.ttf');
+  src: url('../public/fonts/helvetica-rounded-bold-5871d05ead8de.otf');
+  src: url('../public/fonts/helvetica-light-587ebe5a59211.ttf');
+}
