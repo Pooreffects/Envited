@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import React from 'react';
-import CTAbutton from '../components/shared/CTAbutton';
+import React, { useState } from 'react';
+import Modal from '../components/create/Modal';
 /* Icons import */
 import { CgCalendarDates } from 'react-icons/cg';
 import { GoLocation } from 'react-icons/go';
 /* Framer motion quick animation */
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 /* Notes:
   - I could extract the date data into components 
@@ -13,14 +14,19 @@ import { motion } from 'framer-motion';
 */
 
 export default function Create() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  function handleBookClick() {
+    setModalIsOpen(true);
+    console.log('button clicked!');
+  }
   return (
     <main className="mx-auto container p-6">
-      <div className="w-full p-0 m-0 flex flex-col lg:flex-row items-center justify-evenly">
+      <div className="w-full p-0 m-0 flex flex-col lg:flex-row items-center lg:justify-betwneen justify-evenly">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="w-full text-center"
+          className="text-center"
         >
           <Image
             src="/assets/bd-cake.png"
@@ -93,10 +99,22 @@ export default function Create() {
         </main>
       </div>
       {/* Call to action button is set with animation and reusability props */}
-      <section className=" flex items-center justify-between lg:justify-center p-4">
-        <CTAbutton text="Book" href="/" />
-        <CTAbutton text="Next" href="/event" />
+      <section className="flex items-center justify-center lg:justify-evenly p-4">
+        <button
+          type="button"
+          data-modal-toggle="defaultModal"
+          onClick={handleBookClick}
+          className="mr-4 lg:mr-0 border-[1px] rounded px-4 py-1 border-pinkGR bg-transparent text-btnBG font-semibold text-md hover:bg-pinkGR hover:text-white hover:border-none"
+        >
+          Book
+        </button>
+        <Link href="/event" passHref>
+          <a className="border-[1px] rounded px-4 py-1 border-pinkGR bg-transparent text-btnBG font-semibold text-md hover:bg-pinkGR hover:text-white hover:border-none">
+            Next
+          </a>
+        </Link>
       </section>
+      {modalIsOpen && <Modal modalIsOpen={modalIsOpen} />}
     </main>
   );
 }
