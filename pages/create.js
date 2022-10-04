@@ -114,7 +114,9 @@ export default function Create() {
           </a>
         </Link>
       </section>
-      {modalIsOpen && <Modal modalIsOpen={modalIsOpen} />}
+      {modalIsOpen && (
+        <Modal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+      )}
     </main>
   );
 }
