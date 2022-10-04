@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from './datePicker';
+import DatePicker from './DatePicker';
 
 export default function Modal({ modalIsOpen, setModalIsOpen }) {
   return (
