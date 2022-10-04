@@ -8,7 +8,7 @@ export default function Navbar() {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="rounded-xl text-lg text-white font-semibold bg-heading p-2 hover:bg-opacity-90 hover:cursor-pointer"
+          className="mr-4 lg:mr-0 border-[1px] rounded px-4 py-1 border-pinkGR bg-transparent text-btnBG font-semibold text-md hover:bg-pinkGR hover:text-white hover:border-none"
         >
           Home
         </motion.a>

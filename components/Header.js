@@ -3,7 +3,7 @@ import styles from '../styles/Header.module.css';
 import { motion } from 'framer-motion';
 export default function Header() {
   return (
-    <header className="text-center flex flex-col items-center justify-evenly">
+    <header className="text-center flex flex-col items-center justify-evenly ">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

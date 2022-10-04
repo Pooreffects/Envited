@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className="mx-auto container m-0 p-4 flex flex-col items-center">
+    <div className="mx-auto container m-0 p-4 flex flex-col items-center h-screen lg:flex-row-reverse lg:justify-evenly">
       <Head>
         <title>Envited</title>
         <meta name="description" content="Envited to Landing Page" />
