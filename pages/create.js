@@ -15,10 +15,7 @@ import Link from 'next/link';
 
 export default function Create() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  function handleBookClick() {
-    setModalIsOpen(true);
-    console.log('button clicked!');
-  }
+
   return (
     <main className="mx-auto container p-6">
       <div className="w-full p-0 m-0 flex flex-col lg:flex-row items-center lg:justify-betwneen justify-evenly">
@@ -103,7 +100,7 @@ export default function Create() {
         <button
           type="button"
           data-modal-toggle="defaultModal"
-          onClick={handleBookClick}
+          onClick={() => setModalIsOpen(true)}
           className="mr-4 lg:mr-0 border-[1px] rounded px-4 py-1 border-pinkGR bg-transparent text-btnBG font-semibold text-md hover:bg-pinkGR hover:text-white hover:border-none"
         >
           Book
